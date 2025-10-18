@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Endereço</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 24px; }
+    form { max-width: 520px; display: grid; gap: 12px; }
+    label { font-weight: 600; }
+    input { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+    button { padding: 12px 16px; border: 0; border-radius: 8px; cursor: pointer; }
+    button[type="submit"] { background: #2f6fed; color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Endereço</h1>
+
+  <form id="form-endereco" novalidate>
+    <div>
+      <label for="cep">CEP *</label>
+      <input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" placeholder="00000-000" required />
+    </div>
+
+    <div>
+      <label for="logradouro">Logradouro *</label>
+      <input id="logradouro" name="logradouro" type="text" minlength="5" required />
+    </div>
+
+    <div>
+      <label for="numero">Número *</label>
+      <input id="numero" name="numero" type="text" inputmode="numeric" required />
+    </div>
+
+    <div>
+      <label for="uf">UF *</label>
+      <input id="uf" name="uf" type="text" maxlength="2" placeholder="SP" required />
+    </div>
+
+    <div>
+      <label for="complemento">Complemento</label>
+      <input id="complemento" name="complemento" type="text" />
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script src="./script.js"></script>
+</body>
+</html>
